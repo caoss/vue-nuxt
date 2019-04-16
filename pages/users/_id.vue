@@ -6,9 +6,9 @@
 
 <script>
 export default {
-  validate ({ params }) {
+  validate({ params }) {
     // 必须是number类型
-    return /^\d+$/.test(params.id)
+    return /^\d+$/.test(params.id);
   }
 };
 </script>
