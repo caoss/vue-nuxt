@@ -23,9 +23,13 @@ export default {
       e.target.value = ''
     },
     ...mapMutations({
-      toggle: 'todos/toggle'
+      toggle: 'todos/toggle',
+      getList: 'todos/getList'
     })
-  }
+  },
+  created() {
+    this.getList();
+  },
 }
 </script>
 
