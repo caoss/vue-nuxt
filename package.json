@@ -12,8 +12,11 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
     "cross-env": "^5.2.0",
     "element-ui": "^2.4.11",
+    "express": "^4.16.4",
+    "express-session": "^1.16.1",
     "nuxt": "^2.4.0"
   },
   "devDependencies": {

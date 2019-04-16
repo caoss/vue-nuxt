@@ -1,4 +1,6 @@
 import pkg from './package'
+import bodyParser from 'body-parser'
+import session from 'express-session'
 
 export default {
   mode: 'universal',
@@ -42,6 +44,21 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+  ],
+
+  serverMiddleware: [
+    // body-parser middleware
+    bodyParser.json(),
+    // session middleware
+    session({
+      secret: 'super-secret-key',
+      resave: false,
+      saveUninitialized: false,
+      cookie: { maxAge: 60000 }
+    }),
+    // Api middleware
+    // We add /api/login & /api/logout routes
+    '~/api'
   ],
 
   /*
